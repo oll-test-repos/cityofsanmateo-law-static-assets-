@@ -1,0 +1,17 @@
+{
+	"clientVersion": "2.49.0",
+	"themeVersion": "v2",
+	"themeType": "custom",
+	"themeName": "custom",
+	"themeId": "/us/ca/cities/san-mateo",
+	"style": {"namespaceSuffix":"smc"},
+	"logo": {
+		"libraryLogo": {"image":"","srcset":[]},
+		"header": {"image":"/images/logo/logo.png","srcset":["/images/logo/logo.png 1x","/images/logo/logo@2x.png 2x","/images/logo/logo@3x.png 3x"]},
+		"footer": {"image":"/images/logo/seal.png","srcset":["/images/logo/seal.png 1x","/images/logo/seal@2x.png 2x","/images/logo/seal@3x.png 3x"]}
+	},
+	"fonts": ["/biticons/biticons.css","/fonts/montserrat/montserrat.css"],
+	"contact": {"email":"help@openlawlib.org"},
+	"fetchCodeRecency": true,
+	"reader": {"rootUrl":"/","themeVariation":{"header":"hv2"}}
+}
