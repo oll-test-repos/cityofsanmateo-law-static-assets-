@@ -14,30 +14,12 @@
         "path_analyzer": {
           "type": "custom",
           "tokenizer": "path_tokenizer"
-        },
-        "edge_ngram_analyzer": {
-          "type": "custom",
-          "tokenizer": "edge_ngram_tokenizer",
-          "filter": [
-            "asciifolding",
-            "lowercase"
-          ]
         }
       },
       "tokenizer": {
         "path_tokenizer": {
           "type": "path_hierarchy",
           "delimiter": "|"
-        },
-        "edge_ngram_tokenizer": {
-          "type": "edge_ngram",
-          "min_gram": 1,
-          "max_gram": 12,
-          "token_chars": [
-            "letter",
-            "digit",
-            "punctuation"
-          ]
         }
       }
     }
@@ -47,11 +29,10 @@
       "properties": {
         "num": {
           "type": "text",
-          "analyzer": "edge_ngram_analyzer",
-          "search_analyzer": "text_analyzer",
+          "index": true,
+          "analyzer": "text_analyzer",
           "store": true,
-          "boost": 100,
-          "index": true
+          "boost": 100
         },
         "title": {
           "term_vector": "with_positions_offsets",
@@ -76,20 +57,7 @@
         "path": {
           "type": "text",
           "analyzer": "path_analyzer",
-          "search_analyzer": "path_analyzer",
-          "index": true
-        },
-        "ref_doc": {
-          "type": "text",
-          "analyzer": "text_analyzer",
-          "store": true,
-          "index": false
-        },
-        "doc_cite": {
-          "type": "text",
-          "analyzer": "text_analyzer",
-          "store": true,
-          "index": false
+          "search_analyzer": "path_analyzer"
         }
       }
     }
